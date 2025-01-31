@@ -2,12 +2,13 @@ namespace Core.Calculator.Parts
 {
     public class NotCalculator
     {
+        private NandCalculator nand;
         /// <summary>
         /// And演算を行うクラス
         /// </summary>
         public NotCalculator()
         {
-
+            nand = new();
         }
 
 
@@ -18,7 +19,7 @@ namespace Core.Calculator.Parts
         /// <returns></returns>
         public bool Calc(bool x)
         {
-            return !x;
+            return nand.Calc(x, x);
         }
     }
 }
